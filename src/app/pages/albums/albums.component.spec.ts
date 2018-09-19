@@ -1,9 +1,8 @@
-import { ActivatedRoute } from '@angular/router';
+import { fakeAsync, flush } from '@angular/core/testing';
 import { of } from 'rxjs';
 
 import { PhotoService } from '../../services/photo.service';
 import { AlbumsComponent } from './albums.component';
-import { fakeAsync, flush } from '@angular/core/testing';
 
 
 describe('AlbumsComponent', () => {

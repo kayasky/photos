@@ -7,12 +7,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { UsersComponent } from './pages/users/users.component';
 import { AlbumsComponent } from './pages/albums/albums.component';
+import { PhotosComponent } from './pages/photos/photos.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     UsersComponent,
-    AlbumsComponent
+    AlbumsComponent,
+    PhotosComponent
   ],
   imports: [
     BrowserModule,
