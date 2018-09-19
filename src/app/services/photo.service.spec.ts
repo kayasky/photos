@@ -35,8 +35,8 @@ describe('PhotoService', () => {
 
   describe('#getAlbumsForUser', () => {
     it('should fetch the albums list for a particular user', fakeAsync(() => {
-      const mockResponse = [{ 'albumId': Math.random() }];
-      const userId = Math.random();
+      const mockResponse = [{ 'albumId': Math.random().toString() }];
+      const userId = Math.random().toString();
       httpClient.get.and.returnValue(of(mockResponse));
 
       service.getAlbumsForUser(userId).subscribe((response) => {
@@ -50,8 +50,8 @@ describe('PhotoService', () => {
 
   describe('#getPhotosInAlbum', () => {
     it('should fetch the photos within a particular album', fakeAsync(() => {
-      const mockResponse = [{ 'photoId': Math.random() }];
-      const albumId = Math.random();
+      const mockResponse = [{ 'photoId': Math.random().toString() }];
+      const albumId = Math.random().toString();
       httpClient.get.and.returnValue(of(mockResponse));
 
       service.getPhotosInAlbum(albumId).subscribe((response) => {

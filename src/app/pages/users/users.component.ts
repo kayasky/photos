@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 import { PhotoService } from './../../services/photo.service';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-users',
@@ -11,13 +12,20 @@ import { PhotoService } from './../../services/photo.service';
 
 export class UsersComponent implements OnInit {
 
+  users: Array<any> = [];
+  subscriptions: Subscription = new Subscription();
+
   constructor(private photoService: PhotoService) { }
 
   ngOnInit() {
-    this.photoService
+    this.subscriptions.add(this.photoService
       .getUsers()
       .subscribe((users) => {
-        console.log(users);
-      });
+        this.users = users;
+      }));
+  }
+
+  OnDestroy() {
+    this.subscriptions.unsubscribe();
   }
 }

@@ -1,3 +1,5 @@
-<p>
-  users works!
-</p>
+<ul>
+  <li *ngFor="let user of users">
+    <a routerLink="/albums/{{ user.id }}" routerLinkActive="router-link-active">{{ user.name }}</a>
+  </li>
+</ul>
