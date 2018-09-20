@@ -7,7 +7,7 @@ import { Subscription } from 'rxjs';
 @Component({
   selector: 'app-albums',
   templateUrl: './albums.component.html',
-  styleUrls: ['./albums.component.css'],
+  styleUrls: ['./albums.component.scss'],
   providers: [PhotoService]
 })
 export class AlbumsComponent implements OnInit {

@@ -7,7 +7,7 @@ import { PhotoService } from '../../services/photo.service';
 @Component({
   selector: 'app-photos',
   templateUrl: './photos.component.html',
-  styleUrls: ['./photos.component.css'],
+  styleUrls: ['./photos.component.scss'],
   providers: [PhotoService]
 })
 export class PhotosComponent implements OnInit {

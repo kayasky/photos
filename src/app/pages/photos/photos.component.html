@@ -1,5 +1,5 @@
 <div *ngIf="photos?.length; else loading" >
-  <mat-card *ngFor="let photo of photos" class="example-card">
+  <mat-card *ngFor="let photo of photos" class="photo-card">
     <img mat-card-image [src]="photo.url" alt="{{ photo.title }}">
     <mat-card-content>
       <p>
