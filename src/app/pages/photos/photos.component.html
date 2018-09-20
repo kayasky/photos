@@ -1,8 +1,14 @@
-<mat-card *ngFor="let photo of photos" class="example-card">
-  <img mat-card-image [src]="photo.url" alt="{{ photo.title }}">
-  <mat-card-content>
-    <p>
-      {{ photo.title }}
-    </p>
-  </mat-card-content>
-</mat-card>
+<div *ngIf="photos?.length; else loading" >
+  <mat-card *ngFor="let photo of photos" class="example-card">
+    <img mat-card-image [src]="photo.url" alt="{{ photo.title }}">
+    <mat-card-content>
+      <p>
+        {{ photo.title }}
+      </p>
+    </mat-card-content>
+  </mat-card>
+</div>
+
+<ng-template #loading>
+  <mat-progress-bar mode="indeterminate"></mat-progress-bar>
+</ng-template>

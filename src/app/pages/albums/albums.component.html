@@ -1,8 +1,14 @@
-<mat-list>
-  <a mat-list-item
-    *ngFor="let album of albums"
-    routerLink="/photos/{{ album.id }}"
-    routerLinkActive="router-link-active">
-    {{ album.title }}
-  </a>
+<mat-list *ngIf="albums?.length; else loading" >
+  <h3 mat-subheader>Albums</h3>
+  <mat-list-item *ngFor="let album of albums">
+    <a class="fill-space" routerLink="/photos/{{ album.id }}">
+      {{ album.title }}
+    </a>
+    <mat-icon>chevron_right</mat-icon>
+    <mat-divider></mat-divider>
+  </mat-list-item>
 </mat-list>
+
+<ng-template #loading>
+  <mat-progress-bar mode="indeterminate"></mat-progress-bar>
+</ng-template>

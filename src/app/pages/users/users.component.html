@@ -1,12 +1,14 @@
 <mat-list *ngIf="loaded; else loading">
-  <a mat-list-item
-    *ngFor="let user of users"
-    routerLink="/albums/{{ user.id }}"
-    routerLinkActive="router-link-active">
-    {{ user.name }}
-  </a>
+  <h3 mat-subheader>Users</h3>
+  <mat-list-item *ngFor="let user of users">
+    <a class="fill-space" routerLink="/albums/{{ user.id }}">
+      {{ user.name }}
+    </a>
+    <mat-icon>chevron_right</mat-icon>
+    <mat-divider></mat-divider>
+  </mat-list-item>
 </mat-list>
 
 <ng-template #loading>
-  Loading...
+  <mat-progress-bar mode="indeterminate"></mat-progress-bar>
 </ng-template>
