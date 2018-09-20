@@ -8,6 +8,7 @@ describe('PhotosComponent', () => {
   let component: PhotosComponent;
   let route: any;
   let photoService: jasmine.SpyObj<PhotoService>;
+  const appService = null;
 
   beforeEach(() => {
     photoService = jasmine.createSpyObj('PhotoService', ['getPhotosInAlbum']);
@@ -22,7 +23,7 @@ describe('PhotosComponent', () => {
 
     photoService.getPhotosInAlbum.and.returnValue(of({}));
 
-    component = new PhotosComponent(route, photoService);
+    component = new PhotosComponent(appService, route, photoService);
   });
 
   it('should create', () => {

@@ -1,3 +1,11 @@
+<mat-toolbar>
+  <mat-toolbar-row>
+    <button (click)="appService.goBack()" mat-icon-button>
+      <mat-icon aria-label="Go Back">chevron_left</mat-icon>
+    </button>
+    <span class="page-title">Albums</span>
+  </mat-toolbar-row>
+</mat-toolbar>
 <mat-list *ngIf="albums?.length; else loading" >
   <mat-list-item *ngFor="let album of albums">
     <a class="fill-space" routerLink="/photos/{{ album.id }}">

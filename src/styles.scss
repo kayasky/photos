@@ -3,6 +3,7 @@
 body {
   margin: 0;
   padding: 0;
+
   a {
     text-decoration: none;
     color: black;
@@ -11,4 +12,15 @@ body {
   .fill-space {
     flex: 1 1 auto;
   }
+
+  mat-toolbar-row {
+    mat-icon.material-icons.mat-icon {
+      font-size: 2rem;
+      width: 2rem;
+    }
+    .page-title {
+      margin: auto;
+    }
+  }
+
 }

@@ -1,3 +1,4 @@
+import { AppService } from './../../services/app.service';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
@@ -8,7 +9,7 @@ import { Subscription } from 'rxjs';
   selector: 'app-albums',
   templateUrl: './albums.component.html',
   styleUrls: ['./albums.component.scss'],
-  providers: [PhotoService]
+  providers: [PhotoService, AppService]
 })
 export class AlbumsComponent implements OnInit {
 
@@ -16,7 +17,8 @@ export class AlbumsComponent implements OnInit {
   subscriptions: Subscription = new Subscription();
   private userId: string;
 
-  constructor(private route: ActivatedRoute,
+  constructor(public appService: AppService,
+    private route: ActivatedRoute,
     private photoService: PhotoService) { }
 
   ngOnInit() {

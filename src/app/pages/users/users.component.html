@@ -1,5 +1,9 @@
+<mat-toolbar>
+  <mat-toolbar-row>
+    <span class="page-title">Users</span>
+  </mat-toolbar-row>
+</mat-toolbar>
 <mat-list *ngIf="loaded; else loading">
-  <h3 mat-subheader>Users</h3>
   <mat-list-item *ngFor="let user of users">
     <a class="fill-space" routerLink="/albums/{{ user.id }}">
       {{ user.name }}

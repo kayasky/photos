@@ -3,12 +3,13 @@ import { ActivatedRoute } from '@angular/router';
 import { Subscription } from 'rxjs';
 
 import { PhotoService } from '../../services/photo.service';
+import { AppService } from '../../services/app.service';
 
 @Component({
   selector: 'app-photos',
   templateUrl: './photos.component.html',
   styleUrls: ['./photos.component.scss'],
-  providers: [PhotoService]
+  providers: [PhotoService, AppService]
 })
 export class PhotosComponent implements OnInit {
 
@@ -16,7 +17,8 @@ export class PhotosComponent implements OnInit {
   subscriptions: Subscription = new Subscription();
   private albumId: string;
 
-  constructor(private route: ActivatedRoute,
+  constructor(public appService: AppService,
+    private route: ActivatedRoute,
     private photoService: PhotoService) { }
 
   ngOnInit() {
