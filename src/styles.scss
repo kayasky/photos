@@ -3,13 +3,12 @@
 body {
   margin: 0;
   padding: 0;
-}
+  a {
+    text-decoration: none;
+    color: black;
+  }
 
-a {
-  text-decoration: none;
-  color: black;
-}
-
-.fill-space {
-  flex: 1 1 auto;
+  .fill-space {
+    flex: 1 1 auto;
+  }
 }

@@ -1,5 +1,4 @@
 <mat-list *ngIf="albums?.length; else loading" >
-  <h3 mat-subheader>Albums</h3>
   <mat-list-item *ngFor="let album of albums">
     <a class="fill-space" routerLink="/photos/{{ album.id }}">
       {{ album.title }}

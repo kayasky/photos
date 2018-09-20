@@ -1,6 +1,10 @@
-.mat-card.photo-card {
-  max-width: 400px;
-  margin: 20px auto;
-  box-shadow: none;
-  border: 1px solid;
+mat-card {
+  &.photo-card {
+    max-width: 400px;
+    margin: 20px auto;
+    box-shadow: none;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+  }
 }
