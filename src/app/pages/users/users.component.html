@@ -1,8 +1,11 @@
-<ul *ngIf="loaded; else loading">
-  <li *ngFor="let user of users">
-    <a routerLink="/albums/{{ user.id }}" routerLinkActive="router-link-active">{{ user.name }}</a>
-  </li>
-</ul>
+<mat-list *ngIf="loaded; else loading">
+  <a mat-list-item
+    *ngFor="let user of users"
+    routerLink="/albums/{{ user.id }}"
+    routerLinkActive="router-link-active">
+    {{ user.name }}
+  </a>
+</mat-list>
 
 <ng-template #loading>
   Loading...

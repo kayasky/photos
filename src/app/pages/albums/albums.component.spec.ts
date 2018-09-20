@@ -4,7 +4,6 @@ import { of } from 'rxjs';
 import { PhotoService } from '../../services/photo.service';
 import { AlbumsComponent } from './albums.component';
 
-
 describe('AlbumsComponent', () => {
   let component: AlbumsComponent;
   let route: any;

@@ -1,6 +1,8 @@
-<ul>
-  <li *ngFor="let photo of photos">
-    <img [src]="photo.url" />
-    <p>{{ photo.title }}</p>
-  </li>
-</ul>
+<mat-card *ngFor="let photo of photos" class="example-card">
+  <img mat-card-image [src]="photo.url" alt="{{ photo.title }}">
+  <mat-card-content>
+    <p>
+      {{ photo.title }}
+    </p>
+  </mat-card-content>
+</mat-card>

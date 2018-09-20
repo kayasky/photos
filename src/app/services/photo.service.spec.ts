@@ -5,7 +5,6 @@ import { of } from 'rxjs';
 import { APP_CONSTANTS } from './../app.constants';
 import { PhotoService } from './photo.service';
 
-
 describe('PhotoService', () => {
   let service: PhotoService;
   let httpClient: jasmine.SpyObj<HttpClient>;
